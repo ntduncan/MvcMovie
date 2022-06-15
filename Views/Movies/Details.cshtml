@@ -1,0 +1,55 @@
+@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+
+
+<div class="row">
+
+    <div class="col-3">
+        <img src="@Html.DisplayFor(model => model.URL)" alt="" max-width="200">
+    </div>
+
+    <div class="col">
+        <h1>@Html.DisplayFor(model => model.Title)</h1>
+        <dl class="row">
+            <dt class = "col-sm-3">
+                @Html.DisplayNameFor(model => model.Rating)
+            </dt>
+            <dd class = "col-sm-9">
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+            <dt class = "col-sm-3">
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </dt>
+            <dd class = "col-sm-9">
+                @Html.DisplayFor(model => model.ReleaseDate)
+            </dd>
+            <dt class = "col-sm-3">
+                @Html.DisplayNameFor(model => model.Genre)
+            </dt>
+            <dd class = "col-sm-9">
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+            <dt class = "col-sm-3">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class = "col-sm-9">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+        </dl>
+    </div>
+</div>    
+
+</div>
+<div>
+
+
+    <br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
